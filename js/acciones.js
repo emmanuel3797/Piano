@@ -1,25 +1,45 @@
 //JavaScript
-$(document).ready(function(e){
-$('#principal').height($('#page1').height());
-    document.addEventListener("deviceready",function(){
+$(document).ready(function(e) {
+    $('#principal').height($().height());
+	document.addEventListener("deviceready",function(){
+		audio=window.plugins.LowLatencyAudio;
 		
-    audio=window.plugins.LowLatencyAudio;
-	
-	audio.preloadFX('do','audio/DO.mp3', function(){},function(e){alert('Error'+e);});
-	audio.preloadFX('re','audio/RE.mp3', function(){},function(e){alert('Error'+e);});		
-    audio.preloadFX('mi','audio/MI.mp3', function(){},function(e){alert('Error'+e);});
-	audio.preloadFX('fa','audio/FA.mp3', function(){},function(e){alert('Error'+e);});
-	audio.preloadFX('sol','audio/SOL.mp3', function(){},function(e){alert('Error'+e);});		
-	audio.preloadFX('la','audio/LA.mp3', function(){},function(e){alert('Error'+e);});		
-	audio.preloadFX('si','audio/SI.mp3', function(){},function(e){alert('Error'+e);});		
-	
-$('.nota').bind('touchstart',function(){
-	$(this).addClass('tocada');
-	 audio.play($(this).attr('id'));
-	 
-}).bind('touchend',function(){
-	$(this).removeClass('tocada');
+		audio.preloadFX('portadaletras','sonidos/inicio/sol.mp3', function(){},function(e){alert('Error'+e);});		
+	    audio.preloadFX('portadanumeros','sonidos/inicio/la.mp3', function(){},function(e){alert('Error'+e);});	
+
+        audio.preloadFX('imagen_letra_a','sonidos/letras/sonido_A.mp3', function(){},function(e){alert('Error'+e);});	
+		audio.preloadFX('imagen_animal_a','sonidos/animales/sonido_A.mp3', function(){},function(e){alert('Error'+e);});	
+
+
+				audio.preloadFX('perro','sonidos/animales/perro_uno.mp3', function(){},function(e){alert('Error'+e);});	
+
+    $('#principal').height($('#principal').height());
+
+$('#portadanumeros').on('tap', function (){
+	audio.play ('sol');
+});
+
+$('#portadaletras').on('tap', function (){
+	audio.play ('la');
+});
+
+$('#imagen_animal_a').on('tap', function (){
+	audio.play ('sonido_A');
+});
+
+$('#imagen_letra_a').on('tap', function (){
+	audio.play ('sonido_A');
+});
+
+$('#imagen_animal_b').on('tap', function (){
+	audio.play ('sonido_B');
+});
+
+$('#imagen_letra_b').on('tap', function (){
+	audio.play ('sonido_B');
 });
 		
-	},false);//deviceready
-}); //ready
+		
+
+	});
+});

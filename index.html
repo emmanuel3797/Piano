@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Piano</title>
+        <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
         <link href="css/jquery.mobile.structure-1.3.2.min.css" rel="stylesheet">
         <link href="css/jquery.mobile-1.3.2.min.css" rel="stylesheet">
@@ -9,111 +9,974 @@
         <script src="js/jquery.mobile-1.3.2.min.js"></script>
         <script src="js/acciones.js"></script>        
       <script src="phonegap.js"></script>
+      <link href="temas/miprimertema.min.css" rel="stylesheet" type="text/css">
+      
+      
 <style>
- #principal
-	  {
-		  position:absolute;
-		  left:0;
-		  top:0;
-		  width::100%;
-	  }
-	  
-#pantalla
-	    {
-         float:left;
-		 width:100%;
-		 height:60%;
-		 background:#09F;
-		 text-align:center;
-		 font-size:3em;
-		 font-weight:bold;
-		 font-family:Tahoma;
-	  }
-	  
-#teclado
-	 {
-		 float:left;
-		 width:100%;
-		 height:40%;
-	 }
-	 
-.nota
-	 {
-		 position:relative;
-		 float:left;
-		 height:90%;
-		 outline:#000 solid 1px;
-		 background:#c9c9c9;
-		 width:14.28571428571429%;
-	 }
-	 
-	 .textonota
-	 {
-		 position:relative;
-		 top:50%;
-		 text-align:center;
-		 font-size:2em;
-		 font-weight:bold;
-		 font-family:Tahoma;
-	 }
-	 
-	 .tocada
-	 {
-		 color:#f00;
-		 background:#00f;
-		 outline:#093 solid 1px;
-	 }
+
+ .contenedorcuadros { float:left; width:100%; height:100%;}
+.contenedorizq { float:right; width:49.5%; height:100%;}
+.contenedorder { float:left; width:49.5%; height:100%;}
+.imagen { width:100%; height:100%;}
+.botonpievolver { float:left; width:40%; margin-left:1%}
+.botonpiemenu { float:left; width:15%; margin-left:1.5%; margin-right:1.5%}
+.botonpiecontinuar { float:left; width:40%; margin-right:1%}
+
   </style>
       
-      </head>
-<body>
-    <div data-role="page" id="page1">
-    
-     <div id="principal">
-        <div id="pantalla" align="center">
-         <h1>Piano I.T.G</h1>
-         </div>
-         
-     <div id="teclado">
-        <div id="do" class="nota">
-           <div class="textonota">
-             DO
-         </div>
-       </div>
-        <div id="re" class="nota">
-          <div class="textonota">
-            RE
-         </div>
-       </div>
-        <div id="mi" class="nota">
-           <div class="textonota">
-           MI
-         </div>
-       </div>
-        <div id="fa" class="nota">
-           <div class="textonota">
-            FA
-         </div>
-       </div>
-        <div id="sol" class="nota">
-           <div class="textonota">
-            SOL
-         </div>
-       </div>
-        <div id="la" class="nota">
-          <div class="textonota">
-            LA
-         </div>
-       </div>
-        <div id="si" class="nota">
-          <div class="textonota">
-            SI
-         </div>
-       </div>
-   </div>
- </div>          
+ </head>
+      
+<body id="paginainicio">
+
+<div data-role="page" id="principal" data-content-theme="c">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <a href="#numeroUno" data-role="button">
+  <img src="portada/portada_numeros.JPG" alt="" class="imagen" id="portadanumeros"/>
+  </a>
+  </div>
+  
+   <div class="contenedorder">
+  <a href="#letraA" data-role="button">
+  <img src="portada/portada_letras.JPG" alt="" class="imagen" id="portadaletras"/>
+  </a>
+  </div>
+  </div>
+  
+  </div>
+  <div data-role="footer">
+    <h4></h4>
+  </div>
 </div>
 
+<div data-role="page" id="letraA" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_a.jpg" alt="" class="imagen" id="imagen_animal_a" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_A.JPG" alt="" class="imagen" id="imagen_letra_a" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#principal" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraB" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraB" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_b.jpg" alt="" class="imagen" id="imagen_animal_b" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_B.JPG" alt="" class="imagen" id="imagen_letra_b" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraA" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraC" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="letraC" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_c.jpg" alt="" class="imagen" id="imagen_animal_c" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_C.JPG" alt="" class="imagen" id="imagen_letra_c" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraB" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraD" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+<div data-role="page" id="letraD" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_d.jpg" alt="" class="imagen" id="imagen_animal_d" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_D.JPG" alt="" class="imagen" id="imagen_letra_d" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraC" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraE" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraE" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_e.jpg" alt="" class="imagen" id="imagen_animal_e" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_E.JPG" alt="" class="imagen" id="imagen_letra_e" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraD" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraF" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraF" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_f.jpg" alt="" class="imagen" id="imagen_animal_f" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_F.JPG" alt="" class="imagen" id="imagen_letra_f" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraE" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraG" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraG" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_g.jpg" alt="" class="imagen" id="imagen_animal_g" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_G.JPG" alt="" class="imagen" id="imagen_letra_g" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraF" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraH" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraH" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_h.jpg" alt="" class="imagen" id="imagen_animal_h" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_H.JPG" alt="" class="imagen" id="imagen_letra_h" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraG" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraI" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraI" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_i.jpg" alt="" class="imagen" id="imagen_animal_i" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_I.JPG" alt="" class="imagen" id="imagen_letra_i" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraH" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraJ" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraJ" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_j.jpg" alt="" class="imagen" id="imagen_animal_j" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_J.JPG" alt="" class="imagen" id="imagen_letra_j" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraI" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraK" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraK" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_k.jpg" alt="" class="imagen" id="imagen_animal_k" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_K.JPG" alt="" class="imagen" id="imagen_letra_k" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraJ" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraL" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraL" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_l.jpg" alt="" class="imagen" id="imagen_animal_l" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_L.JPG" alt="" class="imagen" id="imagen_letra_l" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraK" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraM" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraM" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_m.jpg" alt="" class="imagen" id="imagen_animal_m" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_M.JPG" alt="" class="imagen" id="imagen_letra_m" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraL" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraN" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraN" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_n.jpg" alt="" class="imagen" id="imagen_animal_n" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_N.JPG" alt="" class="imagen" id="imagen_letra_n" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraM" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraÑ" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraÑ" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_ñ.jpg" alt="" class="imagen" id="imagen_animal_ñ" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_Ñ.JPG" alt="" class="imagen" id="imagen_letra_ñ" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraN" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraO" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraO" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_o.jpg" alt="" class="imagen" id="imagen_animal_o" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_O.JPG" alt="" class="imagen" id="imagen_letra_o" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraÑ" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraP" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraP" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_p.jpg" alt="" class="imagen" id="imagen_animal_p" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_P.JPG" alt="" class="imagen" id="imagen_letra_p" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraO" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraQ" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraQ" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_q.jpg" alt="" class="imagen" id="imagen_animal_q" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_Q.JPG" alt="" class="imagen" id="imagen_letra_q" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraP" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraR" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraR" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_r.jpg" alt="" class="imagen" id="imagen_animal_r" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_R.JPG" alt="" class="imagen" id="imagen_letra_r" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraQ" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraS" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraS" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_s.jpg" alt="" class="imagen" id="imagen_animal_s" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_S.JPG" alt="" class="imagen" id="imagen_letra_s" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraR" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraT" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraT" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_t.jpg" alt="" class="imagen" id="imagen_animal_t" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_T.JPG" alt="" class="imagen" id="imagen_letra_t" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraS" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraU" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraU" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_u.jpg" alt="" class="imagen" id="imagen_animal_u" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_U.JPG" alt="" class="imagen" id="imagen_letra_u" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraT" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraV" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraV" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_v.jpg" alt="" class="imagen" id="imagen_animal_v" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_V.JPG" alt="" class="imagen" id="imagen_letra_v" data-role="button"/>
+  </div>
+  </div>
+  
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraU" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraW" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+  
+<div data-role="page" id="letraW" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_w.jpg" alt="" class="imagen" id="imagen_animal_w" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_W.JPG" alt="" class="imagen" id="imagen_letra_w" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraU" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraX" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraX" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_x.jpg" alt="" class="imagen" id="imagen_animal_x" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_x.JPG" alt="" class="imagen" id="imagen_letra_x" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraW" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraY" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraY" data-content-theme="b">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_y.jpg" alt="" class="imagen" id="imagen_animal_y" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_Y.JPG" alt="" class="imagen" id="imagen_letra_y" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraX" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#letraZ" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="letraZ" data-content-theme="a">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="imagen/imagen_z.jpg" alt="" class="imagen" id="imagen_animal_z" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="letras/letra_Z.JPG" alt="" class="imagen" id="imagen_letra_z" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#letraY" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+    </h4>
+  </div>
+</div>
+
+<!-- Inicio Numeros -->
+
+
+<div data-role="page" id="numeroUno" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/1silofono.jpg" alt="" class="imagen" id="imagen_numero_uno" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_uno.JPG" alt="" class="imagen" id="imagen_objeto_uno" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#principal" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroDos" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroDos" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/2elicoptero.jpg" alt="" class="imagen" id="imagen_numero_dos" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_dos.JPG" alt="" class="imagen" id="imagen_objeto_dos" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroUno" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroTres" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroTres" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/3lancha.jpg" alt="" class="imagen" id="imagen_numero_tres" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_tres.JPG" alt="" class="imagen" id="imagen_objeto_tres" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroDos" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroCuatro" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroCuatro" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/4tren.jpg" alt="" class="imagen" id="imagen_numero_cuatro" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_cuatro.JPG" alt="" class="imagen" id="imagen_objeto_cuatro" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroTres" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroCinco" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroCinco" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/5camion.jpg" alt="" class="imagen" id="imagen_numero_cinco" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_cinco.JPG" alt="" class="imagen" id="imagen_objeto_cinco" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroCuatro" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroSeis" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroSeis" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/6conejo.jpg" alt="" class="imagen" id="imagen_numero_seis" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_seis.JPG" alt="" class="imagen" id="imagen_objeto_seis" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroCinco" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroSiete" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroSiete" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/7tambor.jpg" alt="" class="imagen" id="imagen_numero_siete" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_siete.JPG" alt="" class="imagen" id="imagen_objeto_siete" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroSeis" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroOcho" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroOcho" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/8sonaja.png" alt="" class="imagen" id="imagen_numero_ocho" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_ocho.JPG" alt="" class="imagen" id="imagen_objeto_ocho" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroSiete" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroNueve" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroNueve" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/9pelota.jpg" alt="" class="imagen" id="imagen_numero_nueve" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_nueve.JPG" alt="" class="imagen" id="imagen_objeto_nueve" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroOcho" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+      <div class="botonpiecontinuar"><a href="#numeroDiez" data-role="button" data-icon="">Continuar</a></div>
+    </h4>
+  </div>
+</div>
+
+<div data-role="page" id="numeroDiez" data-content-theme="">
+  <div data-role="header">
+    <h1></h1>
+  </div>
+  <div data-role="content">
+  
+  <div class="contenedorcuadros">
+  <div class="contenedorizq">
+  <img src="numeros/objetos/10pato.jpg" alt="" class="imagen" id="imagen_numero_diez" data-role="button"/>
+  </div>
+  <div class="contenedorder">
+  <img src="numeros/numero_diez.JPG" alt="" class="imagen" id="imagen_objeto_diez" data-role="button"/>
+  </div>
+  </div>
+    
+  </div>
+  <div data-role="footer">
+    <h4>
+    <div class="botonpievolver"><a href="#numeroNueve" data-role="button">Volver</a></div>
+      <div class="botonpiemenu"><a href="#principal" data-role="button">Menu</a></div>
+    </h4>
+  </div>
+</div>
 </body>
 </html>
                  
